@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_shopping_gift_app/ui/category/category_list.dart';
+import 'package:flutter_shopping_gift_app/ui/common/carousel/custom_carousel.dart';
 import 'package:flutter_shopping_gift_app/ui/common/custom_text_field.dart';
+import 'package:flutter_shopping_gift_app/ui/common/item/item_list.dart';
+import 'package:flutter_shopping_gift_app/util/mock_util.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -34,6 +37,10 @@ class Dashboard extends StatelessWidget {
           key: UniqueKey(),
           title: "Categories",
         ),
+        CustomCarousel(),
+        ItemList(MockUtil.getTrendingItems(), key: UniqueKey()),
+        ItemList(MockUtil.getFeaturedItems(), key: UniqueKey()),
+        ItemList(MockUtil.getTopSellingItems(), key: UniqueKey()),
       ],
     );
   }
