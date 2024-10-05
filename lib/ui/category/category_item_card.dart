@@ -25,7 +25,7 @@ class CategoryItemCard extends StatelessWidget {
             height: 6,
           ),
           Text(
-            title ?? "Title",
+            title,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontSize: 12, ),
